@@ -8,6 +8,8 @@
   --header-title-text-color: #DB00FF;
   --header-text-bg-color: #FF0070;
   --header-theme-menu-border-color: #FF0070;
+  --header-theme-menu-border-color-transparent: rgba(255,0,112, 0.4);
+  --header-theme-menu-focus-color: #FF0070;
   --accent-color: #FF0070;
   --header-text-color: #000028;
   --main-bg-color: #000028;

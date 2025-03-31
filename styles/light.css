@@ -11,74 +11,278 @@
   */
 
   --header-bg-image: url(..//images/cover-image-light.png);
-  --header-title-text-color: #FFC2E6;
-  --header-text-bg-color: #FF0070;
-  --accent-color: #FF8DCB;
+  --header-title-text-color: #ffc2e6;
+  --header-text-bg-color: #ff0070;
+  --accent-color: #ff8dcb;
   --header-text-color: #353430;
-  --main-bg-color: #FFF1F7;
+  --main-bg-color: #fff1f7;
   --main-text-color: #353430;
   --content-section-title-color: #353430;
-  --footer-title-text-color: #FFC2E6;
+  --footer-title-text-color: #ffc2e6;
   --header-theme-menu-border-color: #353430;
-  --footer-title-accent-color: #FF8DCB;
+  --header-theme-menu-border-color-transparent: rgba(53, 52, 48, 0.4);
+  --header-theme-menu-focus-color: #353430;
+  --footer-title-accent-color: #ff8dcb;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-  --header-bg-image: url(..//images/cover-image-light.png);
-  --header-title-text-color: #FFC2E6;
-  --header-text-bg-color: #FF0070;
-  --accent-color: #FF8DCB;
-  --header-text-color: #353430;
-  --main-bg-color: #FFF1F7;
-  --main-text-color: #353430;
-  --content-section-title-color: #353430;
-  --footer-title-text-color: #FFC2E6;
-  --header-theme-menu-border-color: #353430;
-  --footer-title-accent-color: #FF8DCB;
+    --header-bg-image: url(..//images/cover-image-light.png);
+    --header-title-text-color: #ffc2e6;
+    --header-text-bg-color: #ff0070;
+    --accent-color: #ff8dcb;
+    --header-text-color: #353430;
+    --main-bg-color: #fff1f7;
+    --main-text-color: #353430;
+    --content-section-title-color: #353430;
+    --footer-title-text-color: #ffc2e6;
+    --header-theme-menu-border-color: #353430;
+    --header-theme-menu-border-color-transparent: rgba(53, 52, 48, 0.4);
+    --header-theme-menu-focus-color: #353430;
+    --footer-title-accent-color: #ff8dcb;
   }
-}
 
-.theme-light .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
-  
   .rec::before {
     content: "";
   }
 
-  
   .rec::after {
     display: none;
   }
 
   .header__theme-menu {
-    margin-top: 65px;
+    margin-bottom: 0px;
+    margin-top: 7px;
   }
-  
+
+  .header-title {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    margin-top: 11px;
+  }
+
+  .title-text {
+    margin-bottom: 14px;
+  }
+
   @media (width >=768px) {
     .header__theme-menu {
-      margin-top: 182px;
+      margin-top: 23px;
       margin-bottom: 0px;
     }
 
     .header-title {
       padding-top: 0px;
-      margin-top: 160px;
+      margin-top: 10px;
+      margin-bottom: 0px;
+    }
+
+    .title-text {
+      margin-bottom: 20px;
+    }
+
+    .footer-title {
+      margin-top: 10px;
     }
   }
 
   @media (width >= 1024px) {
+    .rec {
+      grid-row: 4;
+    }
+
+    .header__theme-menu {
+      grid-row: 1;
+      margin-top: 0px;
+      margin-bottom: 128px;
+      padding-bottom: 0px;
+      padding-top: 20px;
+    }
+
+    .header {
+      grid-template-rows: auto;
+    }
+
+    .header-title {
+      margin-top: 80px;
+    }
+
+    .title-text {
+      margin-bottom: 0px;
+      margin-top: 53px;
+    }
+
+    .footer-title {
+      --footer-title-accent-color: #ff0070;
+      margin-top: 0px;
+    }
+  }
+
+  .theme-dark .page {
+    .rec {
+      max-height: 1px;
+    }
+
+    .rec::before {
+      content: "REC";
+    }
+
+    .rec::after {
+      display: block;
+    }
+
+    @media (width >=768px) {
+      .rec {
+        max-height: 1px;
+      }
+
+      .rec::before {
+        content: "REC";
+      }
+
+      .rec::after {
+        display: block;
+      }
+    }
+
+    @media (width >= 1024px) {
+      .rec {
+        grid-row: inherit;
+        display: flex;
+        justify-content: right;
+        max-height: 1px;
+      }
+
+      .rec::before {
+        content: "REC";
+      }
+
+      .rec::after {
+        display: block;
+      }
+
+      .header {
+        grid-template-rows: 1px repeat(3, auto);
+        min-height: 768px;
+      }
+
+      .header__theme-menu-list {
+        display: flex;
+        justify-content: center;
+        max-height: 26px;
+        margin: 0px 0px 0px 5px;
+      }
+
       .header__theme-menu {
-        margin-top: 0px;
-        padding-top: 10px;
+        max-width: 100vw;
+        margin-bottom: 0px;
+        margin-left: 20px;
+        padding-left: 5px;
+        padding-top: 20px;
+      }
+
+      .header__theme-menu-button {
+        font-weight: 400;
+      }
+
+      .header__theme-menu-item {
+        margin-right: 10px;
       }
 
       .header-title {
-        margin-top: 272px;
+        max-width: 759px;
+        font-size: 157px;
+        margin-top: 195px;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
       }
 
-      .footer-title {
-        --footer-title-accent-color: #FF0070;
+      .title-text {
+        max-width: 491px;
+        margin-top: 0px;
+        margin-bottom: 23px;
+        max-height: 71px;
       }
     }
+  }
+}
+
+.theme-light .page {
+  /* Вам также нужно будет написать ряд подобных селекторов */
+
+  .rec::before {
+    content: "";
+  }
+  .rec::after {
+    display: none;
+  }
+
+  .header__theme-menu {
+    margin-bottom: 0px;
+    margin-top: 7px;
+  }
+
+  .header-title {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    margin-top: 11px;
+  }
+
+  .title-text {
+    margin-bottom: 14px;
+  }
+
+  @media (width >=768px) {
+    .header__theme-menu {
+      margin-top: 23px;
+      margin-bottom: 0px;
+    }
+
+    .header-title {
+      padding-top: 0px;
+      margin-top: 10px;
+      margin-bottom: 0px;
+    }
+
+    .title-text {
+      margin-bottom: 20px;
+    }
+
+    .footer-title {
+      margin-top: 10px;
+    }
+  }
+
+  @media (width >= 1024px) {
+    .rec {
+      grid-row: 4;
+    }
+
+    .header {
+      grid-template-rows: auto;
+    }
+
+    .header__theme-menu {
+      grid-row: 1;
+      margin-top: 0px;
+      margin-bottom: 128px;
+      padding-bottom: 0px;
+      padding-top: 20px;
+    }
+
+    .header-title {
+      margin-top: 80px;
+    }
+
+    .title-text {
+      margin-bottom: 0px;
+      margin-top: 53px;
+    }
+
+    .footer-title {
+      --footer-title-accent-color: #ff0070;
+      margin-top: 0px;
+    }
+  }
 }
