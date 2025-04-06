@@ -70,7 +70,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  max-height: 117px;
+  height: min-content;
   margin: 0 10px 25px 10px;
 }
 
@@ -101,8 +101,7 @@
   line-height: 18px;
   text-align: right;
   margin-right: 10px;
-  max-height: 98px;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 
 .header__theme-menu-button {
@@ -266,7 +265,7 @@
 
   .header__theme-menu {
     margin-right: 20px;
-    margin-bottom: 6px;
+    margin-bottom: 0px;
   }
 
   .header-title {
@@ -409,7 +408,7 @@
 
   .header-title {
     max-width: 759px;
-    font-size: 157px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     margin-top: 0px;
     margin-bottom: 110px;
     padding-top: 0px;
@@ -420,7 +419,6 @@
     max-width: 491px;
     margin-top: 0px;
     margin-bottom: 136px;
-    max-height: 71px;
   }
 
   .content-section {
