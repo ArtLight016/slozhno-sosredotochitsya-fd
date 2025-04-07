@@ -25,6 +25,7 @@
   --footer-title-accent-color: #ff8dcb;
 }
 
+
 @media (prefers-color-scheme: light) {
   :root {
     --header-bg-image: url(..//images/cover-image-light.png);
@@ -41,97 +42,28 @@
     --header-theme-menu-focus-color: #353430;
     --footer-title-accent-color: #ff8dcb;
   }
-
-  .theme-auto .page {
-    .rec::before {
-      content: "";
-    }
   
-    .rec::after {
-      display: none;
-    }
+  .rec {
+    visibility: hidden;
+  }
 
-    .rec {
-      margin-bottom: 25px;
-    }
-
-    @media (width >= 1024px) {
-      .footer-title {
-        --footer-title-accent-color: #ff0070;
-        margin-top: 0px;
-      }
+  @media (width >= 1024px) {
+    .footer-title {
+      --footer-title-accent-color: #ff0070;
     }
   }
 }
 
+
 .theme-light .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
 
-  .rec::before {
-    content: "";
-  }
-  .rec::after {
-    display: none;
-  }
-
-  .header__theme-menu {
-    margin-bottom: 0px;
-    margin-top: 7px;
-  }
-
-  .header-title {
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-  }
-  
-  .title-text {
-    margin-bottom: 14px;
-  }
-  
-  @media (width >=768px) {
-    .header__theme-menu {
-      margin-top: 23px;
-      margin-bottom: 0px;
-    }
-
-    .title-text {
-      margin-bottom: 20px;
-    }
-
-    .footer-title {
-      margin-top: 10px;
-    }
+  .rec {
+  visibility: hidden;
   }
 
   @media (width >= 1024px) {
-    .rec {
-      grid-row: 4;
-    }
-
-    .header {
-      grid-template-rows: auto;
-    }
-
-    .header__theme-menu {
-      grid-row: 1;
-      margin-top: 0px;
-      margin-bottom: 128px;
-      padding-bottom: 0px;
-      padding-top: 20px;
-    }
-
-    .header-title {
-      margin-top: 80px;
-    }
-
-    .title-text {
-      margin-bottom: 0px;
-      margin-top: 53px;
-    }
-
     .footer-title {
       --footer-title-accent-color: #ff0070;
-      margin-top: 0px;
     }
   }
 }
